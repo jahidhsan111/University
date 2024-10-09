@@ -1,0 +1,126 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(img/friend.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container .top {
+ background-color: rgba(4, 121, 0, .5);
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: space-between;
+ padding: 0 150px;
+}
+.container .top .logo_area{
+  width: 25%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+
+}
+.container .top .logo_area h1{
+  margin-left: 15px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+ .container .top .main_menu{
+  width: 40%;
+} 
+.container .top .main_menu ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.container .top .main_menu ul li{
+  margin-top: 40px;
+  position: relative;
+}
+.container .top .main_menu ul li::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: aqua;
+  bottom: -5px ;
+  left: 0;
+  transition: 0.5s all ease;
+  z-index: 1;
+  border-radius: 3px;
+}
+.container .top .main_menu ul li:hover::after{
+  width: 100%;
+}
+.container .top .main_menu ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  position: relative;
+  z-index: 55;
+}
+.container .top .main_menu ul li a:hover{
+  color:black;
+}
+.info_area{
+  text-align: center;
+  position: absolute;
+  top:50%
+}
+.info_area h1{
+  text-transform:uppercase ;
+  color: #fff;
+}
+.info_area p{
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0px;
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.container .info_area .btn{
+  display: inline-block;
+  border: 2px solid aqua;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.container .info_area .btn::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: gray;
+  transition: 1s all ease-in-out;
+  z-index: 1;
+}
+.container .info_area .btn:hover::before{
+  width: 100%;
+}
+.container .info_area .btn a{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 20px;
+  font-family: sans-serif;
+  transition: 0.3 all ease-in-out;
+  position: relative;
+  z-index: 5;
+}
+.container .info_area .btn a:hover{
+  color: black;
+}
+
